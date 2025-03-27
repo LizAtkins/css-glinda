@@ -20,7 +20,8 @@ There are several planned additions and improvements to further refine the desig
 
 ## Credit
 
-This project builds upon the work of [Alvaro Montoro](https://codepen.io/alvaromontoro), whose original Elphaba Witch design served as the foundation for this transformation. His creativity and skill in CSS were pivotal in bringing the concept to life.
+- This project builds upon the work of [Alvaro Montoro](https://codepen.io/alvaromontoro), whose original Elphaba Witch design served as the foundation for this transformation. His creativity and skill in CSS were pivotal in bringing the concept to life.
+- View the link to the original project [here](https://codepen.io/alvaromontoro/pen/VwjXVzy).
 
 ## How to Use
 
