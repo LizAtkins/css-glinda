@@ -1,5 +1,7 @@
 # Glinda Witch - CSS Witch Transformation
 
+![Header Image](./header-img.png)
+
 This project is based on an amazing CSS witch created by [Alvaro Montoro](https://codepen.io/alvaromontoro) (originally an Elphaba-inspired design). I've transformed it into a Glinda-inspired witch, complete with some new features and customizations. 
 
 ## Project Overview
