@@ -1,0 +1,306 @@
+html, body {
+  --bg: rgb(250, 198, 218); /****/
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.cartoon {
+  position: absolute;
+  bottom: 10vmin;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80vmin;
+  height: 80vmin;
+  top: 15%;  /***/
+
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.cartoon {
+  --skin: #F3DCC4;  /****/
+}
+
+.face {
+  width: 42%; /****/
+  height: 53%; /****/
+  border-radius: 100% / 80% 80% 125% 125%;  /****/
+  background: var(--skin);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: linear-gradient(transparent 16%, var(--skin) 0)
+}
+
+.face::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Adjust to move the semi-circle above the face */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Adjust the width of the semi-circle */
+  height: 70%; /* Height of the semi-circle */
+  background-color: var(--skin); /* Same color as the face */
+  border-radius: 100% / 80% 80% 125% 125%;  /****/
+}
+
+
+
+.eye {
+  width: 28%;
+  height: 19%;
+  background: white;
+  border-radius: 4% 120% 12% 120%; /***/
+  transform: rotate(-30deg);
+  top: 35%;
+  left: 10%;
+  box-shadow: inset 1vmin 1.5vmin, 0.75vmin -1.25vmin 1vmin 1vmin #F4C2C2; /****/
+}
+
+.eye + .eye {
+  transform: scaleX(-1) rotate(-30deg);
+  left: auto;
+  right: 10%;
+}
+
+.eye::before {
+  width: 1.5vmin;
+  height: 1.5vmin;
+  background: #111;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0 0 1.5vmin 0.5vmin #fff3, 0 0 0 1.5vmin #4A342E; /****/
+}
+
+.eye::after {
+  width: 0.75vmin;
+  height: 0.75vmin;
+  background: white;
+  left: 55%;
+  top: 45%;
+  border-radius: 50%;
+  box-shadow: 0.5vmin 0.5vmin 0 -0.125vmin white;
+}
+
+.eye + .eye::after {
+  box-shadow: -0.5vmin -0.25vmin 0 -0.125vmin white;
+}
+
+.eyebrow {
+  width: 45%;
+  height: 15%;
+  top: 30%;
+  left: 0%;
+  box-shadow: 0.5vmin -1.5vmin 0 -1vmin #A67C52;  /****/
+  transform: rotate(-5deg);
+}
+
+.eyebrow + .eyebrow {
+  left: 55%;
+  transform: scaleX(-1) rotate(-8deg);
+}
+
+.nose {
+  width: 19%;  /****/
+  height: 12%;  /****/
+  top: 56%;  /****/
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: inset 0 -5vmin 0 -4vmin #E1B88D, inset 0 -5.25vmin 0 -4vmin #E1B88D, 0 -0.5vmin var(--skin), 0 -2vmin 0 -1.25vmin #E1B88D; /***/
+  border: 0.5vmin solid transparent;
+  border-top: 0.25vmin solid #E1B88D; /****/
+}
+
+.mouth {
+  width: 37%;
+  height: 3%;
+  border: 0.25vmin solid transparent;
+  border-bottom: 0.5vmin solid #222;
+  top: 76%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(-4deg);
+  background: #F1C6C6; /****/
+}
+
+.mouth::before {
+  width: 20%;
+  height: 250%;
+  border: 0.15vmin solid transparent;
+  border-right: 0.3vmin solid;
+  border-radius: 50%;
+  right: -3%;
+  top: -20%;
+  transform: rotate(-10deg);
+}
+
+.bottom-lip {
+  width: 36%; /****/
+  height: 18%;
+  top: 65%;
+  left: 32.5%; /***/
+  border-radius: 50%;
+  background: linear-gradient(transparent 70%, #F1C6C6 0); /***/
+  transform: rotate(-4deg);
+}
+
+.neck {
+  width: 12%;  /****/
+  height: 13%; /****/
+  background: var(--skin);
+  top: 71%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-image: linear-gradient(rgba(0,0,0,0.2), transparent 50%);
+  border-radius: 100% / 0 0 20% 20%;
+}
+
+
+.ear {
+  width: 10%;
+  height: 18%; /****/
+  background: var(--skin);
+  transform: rotate(-13deg);
+  top: 42%;
+  left: 26%;
+  box-shadow: inset 0 0 0 10vmin rgba(0,0,0,0.035); /***/
+}
+
+.ear + .ear {
+  transform: scaleX(-1) rotate(-11deg);
+  left: auto;
+  right: 26%;
+}
+
+.hair {
+  width: 180%;
+  height: 250%;
+  top: 17%;
+  left: -25%;
+  overflow: hidden;
+}
+
+.body {
+  width: 70%;
+  height: 100%;
+  background: #FADCD9; /***/
+  top: 82.5%; /***/
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 60% / 90% 90% 90% 90%; /***/
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Sparkle effect */  /***/
+}
+
+.broom {
+  width: 10%;
+  height: 150%;
+  background: #963;
+  border-radius: 100% / 3vmin 3vmin 0 0; 
+  transform: rotate(10deg);
+  top: 50%;
+  left: 80%;
+  overflow: hidden;
+}
+
+.broom::after {
+  width: 100%;
+  height: 2vmin;
+  background: #fff7;
+  border-radius: 50%;
+}
+
+.hair-front {
+  position: absolute;
+  top: 8%; /* Adjust as needed for top position */
+  left: 50%;
+  width: 60%; /* Set width of the hair front */
+  height: 75%; /* Adjust height to cover the top part */
+  transform: translateX(-50%);
+  background: #E0C88D; /* Hair color */
+  border-radius: 50% 50%50% 50%;
+  overflow: hidden;
+  
+}
+
+.hair-back {
+  width: 60%;
+  height: 100%;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+
+.hair-back::before {
+  width: 40%;
+  height: 50%;
+  background: #E0C88D; /*****/
+  border-radius: 50%;
+  top: -25%;
+  left: 5%;
+  box-shadow: 
+    23vmin 2vmin #E0C88D, /*****/
+    25vmin 2vmin #E0C88D, /*****/
+    -2vmin 34vmin #E0C88D,  /*****/
+    22.25vmin 40vmin 0vmin 3vmin #E0C88D;   /*****/
+}
+
+.hair-back::after {
+  width: 20%;
+  height: 40%;
+  border-radius: 50%; /***/
+  transform: rotate(1deg);
+  box-shadow: 
+    5vmin 0 0  -3vmin #E0C88D,  /*****/ 
+    48.125vmin 8.5vmin 0 -2vmin #E0C88D;  /*****/
+}
+
+.wand {
+  width: 2%; /* Make it thinner */
+  height: 120%;
+  background: linear-gradient(to bottom, silver, white); /* Light color for a magical look */
+  border-radius: 50% / 1vmin 1vmin 0 0;
+  transform: rotate(20deg);
+  top: 50%;
+  left: 75%;
+  overflow: visible;
+}
+
+/* Adding a glowing star at the tip */
+.wand::after {
+  content: "✨"; /* Magic sparkle effect */
+  font-size: 2.5vmin;
+  position: absolute;
+  top: -5%;
+  left: 0;
+  transform: translateX(-50%);
+  color: gold;
+  animation: sparkle 1s infinite alternate;
+}
+
+
+/* Animation for a sparkling effect */
+@keyframes sparkle {
+  0% { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
